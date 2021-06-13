@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+    <title>Dobry i trawły samochód</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="favicon.ico" type="image">
+    <link rel="stylesheet" href="reset.css"> 
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <header>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                 <img src="https://images.designtrends.com/wp-content/uploads/2015/11/25102004/Car-Background-Designs4.jpg" style="width:100%">
+                 
+                </div>
+                
+                <div class="mySlides fade">
+                  
+                  <img src="3.jpg" style="width:100%">
+                  
+                </div>
+                
+                <div class="mySlides fade">
+                 
+                  <img src="4.jpg" style="width:100%">
+                  
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+        </header>
+
+        <nav>
+          <a href="file:///C:/Users/Brodway/Desktop/Programowanie/HTML/Pierwsza%20strona%20internetowa/Wersja%20poprawiona/index.html" target="_self">Home</a><a href="file:///C:/Users/Brodway/Desktop/Programowanie/HTML/Pierwsza%20strona%20internetowa/Wersja%20poprawiona/Polecane_samochody.html" target="_self">Polecane samochody</a><a href="file:///C:/Users/Brodway/Desktop/Programowanie/HTML/Pierwsza%20strona%20internetowa/Wersja%20poprawiona/Przepi%C4%99kne%20silniki.html"target="_self" >Najlepsze silniki</a><a href="https://www.autocentrum.pl/galerie/prasowe/lexus-is-2001/" target="_self">Galeria zdjęć</a>
+        </nav>
+       
+        <div class="columns">
+        <div class="column">
+            <img src="car.png">
+            <h1>Auto, proste prawda?</h1>
+            <p>Samochód – pojazd silnikowy służący do przewozu osób lub ładunków</p>
+        </div>
+        <div class="column">
+            <img src="engine.png">
+            <h1>Serce samochodu</h1>
+            <p>Silnik - jest to urządzenie zamieniające ciepło, energię elektryczną albo mechaniczna na pracę o formie dogodnej do napędzania maszyn oraz urządzeń</p>
+        </div>
+        <div class="column">
+            <img src="wheel.png">
+            <h1>Jazda i przemieszczanie</h1>
+            <p>Zawieszenie pojazdu – zespół elementów łączących koła z resztą pojazdu. Zawieszenie przenosi siły powstające na styku koła z jezdnią na nadwozie. Zapewnia komfort jazdy oraz stateczność i sterowność pojazdu.</p>
+        </div>
+    </div>
+        <footer>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eFq3kSpUH64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </footer>
+
+    </div>
+    <script>
+        
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    </script> 
+</body>
+
+</html>
